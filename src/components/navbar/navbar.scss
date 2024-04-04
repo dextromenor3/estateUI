@@ -1,6 +1,6 @@
-@import '../../responsive.scss';
+@import "../../responsive.scss";
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   height: 100px;
@@ -9,18 +9,17 @@ nav{
   a {
     transition: all 0.4s ease;
 
-    @include sm{
+    @include sm {
       display: none;
     }
 
-    &:hover{
+    &:hover {
       scale: 1.05;
     }
   }
-  
 
-  .left{
-    flex:3;
+  .left {
+    flex: 3;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -36,19 +35,19 @@ nav{
         width: 28px;
       }
 
-      span{
-        @include md{
+      span {
+        @include md {
           display: none;
         }
 
-        @include md{
+        @include md {
           display: initial;
         }
       }
     }
   }
-  .right{
-    flex:2;
+  .right {
+    flex: 2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -59,19 +58,61 @@ nav{
       background-color: transparent;
     }
 
-    a{
+    a {
       padding: 12px 24px;
       margin: 20px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+
+      .profile {
+        padding: 12px 24px;
+        background-color: #fece51;
+        border: none;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .notification {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .register {
       background-color: #fece51;
     }
 
-    .menuIcon{
+    .menuIcon {
       display: none;
       z-index: 99;
-      
+
       img {
         width: 36px;
         height: 36px;
@@ -83,7 +124,7 @@ nav{
       }
     }
 
-    .menu{
+    .menu {
       position: absolute;
       top: 0;
       right: -50%;
@@ -96,15 +137,14 @@ nav{
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: 24px; 
-      
+      font-size: 24px;
 
-      &.active{
+      &.active {
         right: 0;
       }
 
       @include sm {
-        a{
+        a {
           display: initial;
         }
       }

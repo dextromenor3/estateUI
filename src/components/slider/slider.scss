@@ -3,7 +3,7 @@
   height: 350px;
   display: flex;
   gap: 20px;
-
+  
   .fullSlider {
     position:absolute;
     width: 100vw;
@@ -15,6 +15,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    z-index: 9999;
 
     .arrow {
       flex: 1;
